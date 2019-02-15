@@ -1,3 +1,4 @@
+
 try {node {
     def app
 
@@ -5,6 +6,10 @@ try {node {
     {
         checkout scm
     }
+	
+    stage("show me the files"){
+	sh "ls -l"
+	}
 
     stage('Apply changes to the environment') {
 
